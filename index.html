@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bật/Tắt Giao Diện</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      text-align: center;
+    }
+
+    .textbox {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .toggle-button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .toggle-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="textbox" id="textbox">Đây là nội dung hiển thị trong textbox.</div>
+  <button class="toggle-button" id="toggleButton" onclick="toggleButtonText()">Bật</button>
+</div>
+
+<script>
+  function toggleButtonText() {
+    const button = document.getElementById('toggleButton');
+    
+    // Chuyển đổi nội dung text giữa "Bật" và "Tắt" mà không ảnh hưởng tới textbox
+    if (button.textContent === "Bật") {
+      button.textContent = "Tắt";
+    } else {
+      button.textContent = "Bật";
+    }
+  }
+</script>
+
+</body>
+</html>
